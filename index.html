@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Personal webpage">
+    <meta name="author" content="Domingos Dellamonica Jr.">
+
+    <title>Domingos Dellamonica Jr.</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="my-4">Domingos Dellamonica Jr.
+            <small>(Página Pessoal)</small>
+        </h1>
+
+        <img src="assets/img/pic.jpg" width="640px" alt="Foto família">
+
+        <p>
+            Bem-vindo a minha página pessoal!
+        </p>
+        <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputPassword" class="sr-only">
+                    Para acessar os vídeos de família, digite a senha e clique no botão</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                <button type="button" class="btn btn-primary mb-2" onclick="viewVideos()">Assistir</button>
+            </div>
+        </form>
+
+        <p>
+            Se deseja conhecer a página da minha empresa, siga o <a href="https://dotproduct.dev">link</a>.
+        </p>
+
+    </div>
+
+    <script>
+        function viewVideos() {
+            var pass = document.getElementById("inputPassword").value;
+            var url = "videos.html?key=" + pass;
+            console.log("redirect to " + url);
+            window.location.replace(url);
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>
